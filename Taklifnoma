@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arslonbek va Shaxnozaxon — To'y taklifnomasi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Manrope:wght@400;600;700&family=Noto+Naskh+Arabic:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="theme-gold">
+    <div class="app">
+      <section class="cover" id="cover">
+        <div class="cover-inner">
+          <p class="kicker" data-bind="kicker">Sizga taklifnoma keldi</p>
+          <h1 data-names data-and="va"></h1>
+          <p class="date-line" data-date></p>
+          <p class="ayah" data-bind="ayah"></p>
+          <p class="ayah-tr" data-bind="ayahTr"></p>
+          <p class="ayah-src" data-bind="ayahSrc"></p>
+          <button class="open-btn" id="openBtn" type="button">Ochish uchun bosing</button>
+        </div>
+      </section>
+
+      <main class="page">
+        <header class="hero">
+          <p class="badge" data-bind="inviteTitle"></p>
+          <h2 class="names" data-names data-and="&amp;"></h2>
+          <p class="date-line" data-date></p>
+        </header>
+
+        <section class="section">
+          <p class="ayah" data-bind="innerAyah"></p>
+          <p class="ayah-tr" data-bind="innerAyahTr"></p>
+          <p class="ayah-src" data-bind="innerAyahSrc"></p>
+          <p class="tiny" style="margin-top: 28px">Katta hurmat bilan</p>
+          <div class="parents">
+            <div>
+              <span class="tiny" data-bind="parentsGroomLabel"></span>
+              <b data-bind="parentsGroom"></b>
+            </div>
+            <div>
+              <span class="tiny" data-bind="parentsBrideLabel"></span>
+              <b data-bind="parentsBride"></b>
+            </div>
+          </div>
+          <p data-bind="parentsNote"></p>
+        </section>
+
+        <section class="section">
+          <p class="tiny">Sizni taklif etamiz</p>
+          <h3 data-bind="inviteLead"></h3>
+          <p data-bind="inviteBody"></p>
+        </section>
+
+        <section class="section">
+          <p class="tiny">To‘yga qoldi</p>
+          <div class="countdown">
+            <div><strong id="cdD">0</strong><span>kun</span></div>
+            <div><strong id="cdH">00</strong><span>soat</span></div>
+            <div><strong id="cdM">00</strong><span>daqiqa</span></div>
+            <div><strong id="cdS">00</strong><span>soniya</span></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <p class="tiny">To‘y kuni</p>
+          <div class="calendar">
+            <header id="calTitle">Oy</header>
+            <div class="cal-grid" id="calGrid"></div>
+          </div>
+          <a class="btn" id="calendarLink" target="_blank" rel="noreferrer">Kalendarga qo‘shish</a>
+        </section>
+
+        <section class="section">
+          <p class="tiny">Sevgi tarixi</p>
+          <h3>Bizning hikoyamiz</h3>
+          <div class="timeline">
+            <article>
+              <time data-bind="story1Year"></time>
+              <div>
+                <strong data-bind="story1Title"></strong>
+                <p data-bind="story1Text"></p>
+              </div>
+            </article>
+            <article>
+              <time data-bind="story2Year"></time>
+              <div>
+                <strong data-bind="story2Title"></strong>
+                <p data-bind="story2Text"></p>
+              </div>
+            </article>
+            <article>
+              <time data-bind="story3Year"></time>
+              <div>
+                <strong data-bind="story3Title"></strong>
+                <p data-bind="story3Text"></p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <p class="tiny">Kun tartibi</p>
+          <h3>Marosim dasturi</h3>
+          <p data-bind="program" data-multiline></p>
+        </section>
+
+        <section class="section">
+          <p class="tiny">Kiyim uslubi</p>
+          <h3>Dress-kod</h3>
+          <p data-bind="dressNote"></p>
+          <div class="palette">
+            <div class="swatch" id="swatch1"></div>
+            <div class="swatch" id="swatch2"></div>
+            <div class="swatch" id="swatch3"></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <p class="tiny">Lahzalar</p>
+          <h3>Bizning suratlarimiz</h3>
+          <div class="gallery">
+            <div class="slot"></div>
+            <div class="slot"></div>
+            <div class="slot"></div>
+            <div class="slot"></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <p class="tiny">Marosim manzili</p>
+          <h3>To‘y qayerda bo‘ladi</h3>
+          <div class="map-card">
+            <h3 style="font-size: 24px; margin: 0" data-bind="venue"></h3>
+            <p data-bind="address"></p>
+            <p data-date></p>
+            <p data-bind="eventTime"></p>
+            <a class="btn solid" id="mapsLink" target="_blank" rel="noreferrer">Manzilni ko‘rish</a>
+          </div>
+        </section>
+
+        <section class="section">
+          <p class="tiny">Ezgu tilaklar</p>
+          <h3>Tilak bildiring</h3>
+          <form id="wishForm">
+            <input id="wishName" required placeholder="Ismingizni yozing" />
+            <textarea id="wishText" required placeholder="Samimiy tilagingiz..."></textarea>
+            <button class="btn solid" type="submit">Tilakni yuborish</button>
+          </form>
+          <div class="wishes" id="wishList"></div>
+        </section>
+
+        <section class="section">
+          <p class="tiny">Ishtirokingiz</p>
+          <h3>To‘yga kelasizmi?</h3>
+          <form id="rsvpForm">
+            <input id="rsvpName" required placeholder="Ismingizni yozing" />
+            <label><input type="radio" name="come" id="rsvpYes" checked /> Albatta kelaman</label>
+            <label><input type="radio" name="come" /> Kela olmayman</label>
+            <input id="rsvpCount" type="number" min="1" value="1" />
+            <button class="btn solid" type="submit">Javobni yuborish</button>
+            <p id="rsvpDone" hidden>Rahmat, javobingiz saqlandi.</p>
+          </form>
+        </section>
+
+        <footer class="footer">
+          <p class="tiny">Sizni kutib qolamiz</p>
+          <div class="names" data-names data-and="&amp;"></div>
+          <p class="date-line" data-date></p>
+        </footer>
+      </main>
+    </div>
+
+    <div class="fab-row">
+      <button class="fab" id="musicBtn" type="button" title="Musiqa">♪</button>
+      <button class="fab" id="editBtn" type="button" title="Tahrirlash">✎</button>
+    </div>
+
+    <audio id="music" loop></audio>
+
+    <aside class="editor" id="editor">
+      <div class="editor-panel">
+        <h2>Taklifnomani tahrirlash</h2>
+        <p style="margin-bottom: 16px; color: #6d6458">
+          O‘zgartirishlar darhol ko‘rinadi va shu qurilmada saqlanadi.
+        </p>
+        <div class="row-2">
+          <label>Kuyov <input data-edit="groom" /></label>
+          <label>Kelin <input data-edit="bride" /></label>
+        </div>
+        <label>Sana va soat <input data-edit="dateISO" type="datetime-local" /></label>
+        <label>Muqova surati (havola) <input data-edit="coverImage" /></label>
+        <label>
+          Shablon
+          <select data-edit="theme">
+            <option value="theme-gold">Oltin kecha</option>
+            <option value="theme-rose">Gulrang</option>
+            <option value="theme-emerald">Zumrad</option>
+          </select>
+        </label>
+        <label>Yuqori yozuv <input data-edit="kicker" /></label>
+        <label>Arabcha oyat <textarea data-edit="ayah"></textarea></label>
+        <label>Tarjima <textarea data-edit="ayahTr"></textarea></label>
+        <label>Manba <input data-edit="ayahSrc" /></label>
+        <label>Ichki oyat <textarea data-edit="innerAyah"></textarea></label>
+        <label>Ichki tarjima <textarea data-edit="innerAyahTr"></textarea></label>
+        <div class="row-2">
+          <label>Kuyov ota-onasi <input data-edit="parentsGroom" /></label>
+          <label>Kelin ota-onasi <input data-edit="parentsBride" /></label>
+        </div>
+        <label>Taklif matni <textarea data-edit="inviteBody"></textarea></label>
+        <label>Hikoya 1 <input data-edit="story1Year" /><input data-edit="story1Title" /><textarea data-edit="story1Text"></textarea></label>
+        <label>Hikoya 2 <input data-edit="story2Year" /><input data-edit="story2Title" /><textarea data-edit="story2Text"></textarea></label>
+        <label>Hikoya 3 <input data-edit="story3Year" /><input data-edit="story3Title" /><textarea data-edit="story3Text"></textarea></label>
+        <label>Dastur <textarea data-edit="program"></textarea></label>
+        <label>Dress-kod <input data-edit="dressNote" /></label>
+        <div class="row-2">
+          <label>Rang 1 <input data-edit="color1" type="color" /></label>
+          <label>Rang 2 <input data-edit="color2" type="color" /></label>
+        </div>
+        <label>To‘yxona <input data-edit="venue" /></label>
+        <label>Manzil <input data-edit="address" /></label>
+        <label>Xarita havolasi <input data-edit="mapsUrl" /></label>
+        <label>Boshlanish vaqti <input data-edit="eventTime" /></label>
+        <label>Surat 1 havolasi <input data-edit="photo1" /></label>
+        <label>Surat 2 havolasi <input data-edit="photo2" /></label>
+        <label>Surat 3 havolasi <input data-edit="photo3" /></label>
+        <label>Surat 4 havolasi <input data-edit="photo4" /></label>
+        <label>Musiqa havolasi <input data-edit="musicUrl" /></label>
+        <button class="btn solid" id="exportBtn" type="button">JSON yuklab olish</button>
+        <label>JSON yuklash <input id="importFile" type="file" accept="application/json" /></label>
+        <button class="btn" id="resetBtn" type="button">Qayta o‘rnatish</button>
+        <button class="btn solid" id="closeEditor" type="button">Yopish va ko‘rish</button>
+      </div>
+    </aside>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
